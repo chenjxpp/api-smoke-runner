@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-smoke-runner"
+version = "0.1.0"
+description = "A dependency-free, JSON-configured HTTP API smoke-test runner"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "chenjxpp" }]
+keywords = ["api", "http", "smoke-test", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+
+[project.scripts]
+api-smoke = "api_smoke_runner.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

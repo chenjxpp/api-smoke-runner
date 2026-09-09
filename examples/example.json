@@ -1,0 +1,14 @@
+{
+  "requests": [
+    {
+      "name": "example.com is reachable",
+      "method": "GET",
+      "url": "https://example.com/",
+      "timeout_seconds": 5,
+      "expect": {
+        "status": 200,
+        "body_contains": "Example Domain"
+      }
+    }
+  ]
+}
